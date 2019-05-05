@@ -1,0 +1,55 @@
+.benefit-block {
+	padding-bottom: 38px;
+	&:last-child {
+		padding: 0;
+	}
+	@media (min-width: 768px) {
+		// Убираем отступ у предпоследнего элемента на планшетах
+		&:nth-last-child(2) {
+			padding-bottom: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+.benefit-block__image {
+	height: 130px;
+	// Берем наименьший отступ снизу для картинок, т.к. по высоте они все разные
+	margin-bottom: 18px;
+	// Задаем отображение как таблицу, чтобы выровнять по вертикали картинку внутри блока (можно флексом, но он не везде поддерживается)
+	display: table;
+	width: 100%;
+	
+	@media (min-width: 1200px) {
+		margin-bottom: 24px;
+	}
+
+	div {
+		// Задаем, как ячейку таблицы
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+	img {
+		// Задаем, чтобы применилось выравнивание
+		display: inline-block;
+	}
+}
+.benefit-block__heading {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #333;
+	margin-bottom: 15px;
+	
+	@media (min-width: 1200px) {
+		font-size: 22px;
+		line-height: 28px;
+	}
+}
+.benefit-block__text {
+	font-size: 14px;
+	line-height: 24px;
+	color: #777;
+}

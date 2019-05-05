@@ -1,0 +1,53 @@
+.heading {
+	color: #333;
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 0;
+	margin-bottom: 30px;
+	position: relative;
+	
+	// Медиа запрос на отступ снизу
+	@media (min-width: 1200px) {
+		font-size: 38px;
+		margin-bottom: 40px;
+	}
+
+	// Модификатор для заголовка
+	&--smaller-margin {
+		margin-bottom: 20px;
+	}
+	
+	&--number:before {
+		height: 26px;
+		width: 26px;
+		display: block;
+        border-radius: 13px;
+		background-color: @orange;
+		color: #FFF;
+		font-size: 16px;
+		font-weight: 700;
+		padding-top: 4px;
+		padding-left: 9px;
+		position: absolute;
+		left: -13px;
+		top: -40px;
+		content: "0";
+	}
+
+	&--number-1:before {
+		content: "1";
+	}
+
+	&--number-2:before {
+		content: "2";
+	}
+	
+	// Медиа запрос для кружков над заголовком
+	// На ПК
+	@media (min-width: 1200px) {
+		&--number:before {
+			left: -32px;
+			top: -30px;
+		}
+	}
+}
