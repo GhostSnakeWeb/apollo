@@ -26,4 +26,5 @@
 ```git clone https://github.com/Screamer4u/apollo.git```
 
 **2.** Перейти в папку с проектом.
+
 **3.** Открыть файл index.html.
